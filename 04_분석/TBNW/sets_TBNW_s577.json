@@ -1,0 +1,168 @@
+{
+ "tag": "TBNW",
+ "outcome_column": "ext__tbnw_cases",
+ "outcome_label_en": "Notified new tuberculosis cases (Korea Disease Control and Prevention Agency national TB notification, annual, district of residence)",
+ "disease_en": "Tuberculosis (new cases)",
+ "disease_ko": "결핵 신환자",
+ "forced": [
+  "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구",
+  "eloc__DT_1YL20981__인구천명당의료기관종사의사수＜br＞(A÷B×1000)",
+  "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)",
+  "eloc__DT_1YL20891__재정자주도(세입과목개편전)",
+  "ext__pop80_share"
+ ],
+ "negative_controls": [
+  "eloc__DT_1YL13901__뺑소니교통사고율＜br＞(A÷B×100)",
+  "eloc__DT_1YL20331__지수__계",
+  "eloc__DT_1YL21081__주민만명당화재발생건수＜br＞(A÷B×10000)"
+ ],
+ "offset_E_column": "E_std",
+ "offset_E_file": "TBNW_Estd25.csv",
+ "offset_E_label": "sex-and-age-standardised E, 2 sexes x 8 age bands (national new-case notification rates by year, sex and age), 2013-2025",
+ "graph": "593-edge contact graph, ST_GRAPH=04_분석/TBNW/graph_593.graph",
+ "population_override": [
+  {
+   "year": 2023,
+   "fbd_region": "경상남도창원시",
+   "population": 1009038,
+   "source": "KOSIS DT_1YL20651E 2023 통합창원시 계; FBD_DATA_ZIP/2023.csv 창원 블록이 2022값 복사(유방암 11/4 population_final_audit)"
+  }
+ ],
+ "sensitivity_only_extra": [
+  "ext__high_risk_drinking_rate",
+  "ext__basic_livelihood_rate"
+ ],
+ "expected_direction": {
+  "ext__older_single_household_share": "+",
+  "ext__medical_aid1_patients_per_100k": "+",
+  "ext__screening_suspected_diabetes_share": "+",
+  "ext__current_smoking_rate": "+",
+  "ext__foreign_residents_per1000": "+",
+  "ext__ltc_hospitals_per100k_65": "+",
+  "ext__general_hospitals_per_100k": "+"
+ },
+ "extra_columns": {
+  "ext__tbnw_cases": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "tbnw_cases"
+  ],
+  "ext__pop80_share": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "pop80_share"
+  ],
+  "ext__older_single_household_share": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "older_single_household_share"
+  ],
+  "ext__medical_aid1_patients_per_100k": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "medical_aid1_patients_per_100k"
+  ],
+  "ext__screening_suspected_diabetes_share": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "screening_suspected_diabetes_share"
+  ],
+  "ext__current_smoking_rate": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "current_smoking_rate"
+  ],
+  "ext__foreign_residents_per1000": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "foreign_residents_log1p"
+  ],
+  "ext__ltc_hospitals_per100k_65": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "ltc_hospitals_per_100k_65"
+  ],
+  "ext__general_hospitals_per_100k": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "general_hospitals_per_100k"
+  ],
+  "ext__high_risk_drinking_rate": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "high_risk_drinking_rate"
+  ],
+  "ext__basic_livelihood_rate": [
+   "EXT_canonical_pool_TBNW_261114.csv",
+   "basic_livelihood_rate"
+  ]
+ },
+ "sets": {
+  "S1_narrative_full": [
+   "ext__older_single_household_share",
+   "ext__medical_aid1_patients_per_100k",
+   "ext__screening_suspected_diabetes_share",
+   "ext__current_smoking_rate",
+   "ext__foreign_residents_per1000",
+   "ext__ltc_hospitals_per100k_65",
+   "ext__general_hospitals_per_100k"
+  ],
+  "S2_reactivation_host": [
+   "ext__older_single_household_share",
+   "ext__screening_suspected_diabetes_share",
+   "ext__current_smoking_rate"
+  ],
+  "S3_deprivation_migration": [
+   "ext__medical_aid1_patients_per_100k",
+   "ext__foreign_residents_per1000"
+  ],
+  "S4_congregate_detection": [
+   "ext__ltc_hospitals_per100k_65",
+   "ext__general_hospitals_per_100k"
+  ],
+  "S5_core": [
+   "ext__older_single_household_share",
+   "ext__medical_aid1_patients_per_100k",
+   "ext__screening_suspected_diabetes_share"
+  ]
+ },
+ "transform": {
+  "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구": "share_of_pop(도시지역인구÷population(마스터))",
+  "eloc__DT_1YL20981__인구천명당의료기관종사의사수＜br＞(A÷B×1000)": "none",
+  "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)": "none",
+  "eloc__DT_1YL20891__재정자주도(세입과목개편전)": "none",
+  "ext__pop80_share": "none",
+  "eloc__DT_1YL13901__뺑소니교통사고율＜br＞(A÷B×100)": "none",
+  "eloc__DT_1YL20331__지수__계": "none",
+  "eloc__DT_1YL21081__주민만명당화재발생건수＜br＞(A÷B×10000)": "none",
+  "ext__older_single_household_share": "none",
+  "ext__medical_aid1_patients_per_100k": "none",
+  "ext__screening_suspected_diabetes_share": "none",
+  "ext__current_smoking_rate": "none",
+  "ext__foreign_residents_per1000": "none",
+  "ext__ltc_hospitals_per100k_65": "none",
+  "ext__general_hospitals_per_100k": "none",
+  "ext__high_risk_drinking_rate": "none",
+  "ext__basic_livelihood_rate": "none"
+ },
+ "rules": {
+  "likelihood": "forced-only 모형 WAIC 낮은 쪽(Poisson/NB); 우도 5종(Poisson·NB·ZIP·ZINB·Poisson+관측 iid) 보조 비교 51L",
+  "set_choice": "WAIC 최소, 4 이내면 변수 적은 세트",
+  "credible": "95% CrI 1 제외",
+  "vif_drop": 10,
+  "multiverse_specs": 127,
+  "main_model_note": "Principal model = S1_narrative_full (7 district characteristics + 5 forced controls). VIF>10 retained and reported.",
+  "main_set": "S1_narrative_full",
+  "vif_action": "report",
+  "years": [
+   2013,
+   2025
+  ],
+  "windows": {
+   "W1_2013-15": [
+    2013,
+    2015
+   ],
+   "W2_2016-19": [
+    2016,
+    2019
+   ],
+   "W3_2020-25": [
+    2020,
+    2025
+   ]
+  },
+  "covid_post_from": 2020
+ },
+ "note": "Outcome: notified new tuberculosis by district of residence (Korea Disease Control and Prevention Agency, KOSIS 117N_A00108), 2013-2025. Characteristics fixed before fitting: older adults living alone, Medical Aid type 1 patients, suspected diabetes at screening, current smoking, foreign residents (log), long-term care hospitals, general hospitals; five forced controls; three negative control exposures."
+}

@@ -1,0 +1,365 @@
+{
+ "tag": "TBNW",
+ "outcome_column": "ext__tbnw_cases",
+ "outcome_label_en": "Notified new tuberculosis cases (Korea Disease Control and Prevention Agency national TB notification, annual, district of residence)",
+ "disease_ko": "결핵 신환자",
+ "disease_en": "Tuberculosis (new cases)",
+ "forced": [
+  "urban_population_share",
+  "physicians_per_1000",
+  "sex_ratio",
+  "fiscal_independence",
+  "pop80_share"
+ ],
+ "candidates": [
+  "older_single_household_share",
+  "medical_aid1_patients_per_100k",
+  "screening_suspected_diabetes_share",
+  "current_smoking_rate",
+  "foreign_residents_per_1000",
+  "ltc_hospitals_per_100k_65",
+  "general_hospitals_per_100k"
+ ],
+ "negative_controls": [
+  "hit_and_run_rate",
+  "traffic_culture_index",
+  "fires_per_10000"
+ ],
+ "sets": {
+  "S1_narrative_full": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate",
+   "foreign_residents_per_1000",
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k"
+  ],
+  "S2_reactivation_host": [
+   "older_single_household_share",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate"
+  ],
+  "S3_deprivation_migration": [
+   "medical_aid1_patients_per_100k",
+   "foreign_residents_per_1000"
+  ],
+  "S4_congregate_detection": [
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k"
+  ],
+  "S5_core": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share"
+  ],
+  "S1b_obesity_sensitivity": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate",
+   "foreign_residents_per_1000",
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k",
+   "obesity_rate"
+  ]
+ },
+ "sensitivity_sets": [
+  "S1b_obesity_sensitivity"
+ ],
+ "sensitivity_only_vars": [
+  "obesity_rate",
+  "high_risk_drinking_rate",
+  "basic_livelihood_rate"
+ ],
+ "offset_column": "population",
+ "offset_sensitivity": null,
+ "offset_fallback": null,
+ "exclude_years": [],
+ "vars": {
+  "urban_population_share": {
+   "key": "urban_population_share",
+   "column": "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구",
+   "transform": "pct_of_pop",
+   "label_en": "Urban-zone population share (%)",
+   "label_ko": "도시지역 인구 비율",
+   "expected_direction": "",
+   "role": "forced",
+   "raw_key": "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구"
+  },
+  "physicians_per_1000": {
+   "key": "physicians_per_1000",
+   "column": "eloc__DT_1YL20981__인구천명당의료기관종사의사수＜br＞(A÷B×1000)",
+   "transform": "none",
+   "label_en": "Physicians per 1000",
+   "label_ko": "인구 천명당 의사 수",
+   "expected_direction": "",
+   "role": "forced",
+   "raw_key": "eloc__DT_1YL20981__인구천명당의료기관종사의사수＜br＞(A÷B×1000)"
+  },
+  "sex_ratio": {
+   "key": "sex_ratio",
+   "column": "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)",
+   "transform": "none",
+   "label_en": "Sex ratio (men per 100 women)",
+   "label_ko": "남녀성비",
+   "expected_direction": "",
+   "role": "forced",
+   "raw_key": "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)"
+  },
+  "fiscal_independence": {
+   "key": "fiscal_independence",
+   "column": "eloc__DT_1YL20891__재정자주도(세입과목개편전)",
+   "transform": "none",
+   "label_en": "Fiscal independence (%)",
+   "label_ko": "재정자주도",
+   "expected_direction": "",
+   "role": "forced",
+   "raw_key": "eloc__DT_1YL20891__재정자주도(세입과목개편전)"
+  },
+  "pop80_share": {
+   "key": "pop80_share",
+   "column": "ext__pop80_share",
+   "transform": "none",
+   "label_en": "Population aged 80+ share (%)",
+   "label_ko": "80세 이상 인구 비율",
+   "expected_direction": "",
+   "role": "forced",
+   "raw_key": "ext__pop80_share"
+  },
+  "older_single_household_share": {
+   "key": "older_single_household_share",
+   "column": "ext__older_single_household_share",
+   "transform": "none",
+   "label_en": "Older-adult single-person household share (%)",
+   "label_ko": "독거노인가구비율",
+   "expected_direction": "+ (독거노인 가구 비율: 한국 결핵 신환자의 다수는 고령층 잠복결핵 재활성화. 혼자 사는 노인은 증상 인지·진료 지연, 영양·돌봄 공백으로 재활성화·진단 지연 위험)",
+   "role": "candidate",
+   "raw_key": "ext__older_single_household_share"
+  },
+  "medical_aid1_patients_per_100k": {
+   "key": "medical_aid1_patients_per_100k",
+   "column": "ext__medical_aid1_patients_per_100k",
+   "transform": "none",
+   "label_en": "Medical Aid type 1 treated patients per 100k",
+   "label_ko": "의료급여 1종 진료실인원(10만 명당)",
+   "expected_direction": "+ (의료급여 1종 진료실인원: 박탈. 빈곤·영양 결핍·밀집 주거가 감염·발병 위험을 높임)",
+   "role": "candidate",
+   "raw_key": "ext__medical_aid1_patients_per_100k"
+  },
+  "screening_suspected_diabetes_share": {
+   "key": "screening_suspected_diabetes_share",
+   "column": "ext__screening_suspected_diabetes_share",
+   "transform": "none",
+   "label_en": "Screening-measured suspected diabetes share (%)",
+   "label_ko": "검진 당뇨 질환의심 비율",
+   "expected_direction": "+ (검진 당뇨 의심 비율: 당뇨병은 활동성 결핵 위험을 약 2-3배 높이는 숙주 감수성 요인)",
+   "role": "candidate",
+   "raw_key": "ext__screening_suspected_diabetes_share"
+  },
+  "current_smoking_rate": {
+   "key": "current_smoking_rate",
+   "column": "ext__current_smoking_rate",
+   "transform": "none",
+   "label_en": "Current smoking rate (SR %)",
+   "label_ko": "현재흡연율",
+   "expected_direction": "+ (현재 흡연율: 흡연은 결핵 감염·발병·재발 위험 요인)",
+   "role": "candidate",
+   "raw_key": "ext__current_smoking_rate"
+  },
+  "foreign_residents_per_1000": {
+   "key": "foreign_residents_per_1000",
+   "column": "ext__foreign_residents_per1000",
+   "transform": "none",
+   "label_en": "Foreign residents per 1000 (log1p)",
+   "label_ko": "인구 천명당 외국인 주민",
+   "expected_direction": "+ (인구 천 명당 외국인 주민, log1p: 고부담국 출신 이주민 유입. 2025 전국 외국인 신환자 897명)",
+   "role": "candidate",
+   "raw_key": "ext__foreign_residents_per1000"
+  },
+  "ltc_hospitals_per_100k_65": {
+   "key": "ltc_hospitals_per_100k_65",
+   "column": "ext__ltc_hospitals_per100k_65",
+   "transform": "none",
+   "label_en": "Long-term care hospitals per 100k aged 65+",
+   "label_ko": "요양병원 수(65세 이상 10만 명당)",
+   "expected_direction": "+ (65세 이상 10만 명당 요양병원: 집단 거주 노출과 의무 검진에 따른 발견)",
+   "role": "candidate",
+   "raw_key": "ext__ltc_hospitals_per100k_65"
+  },
+  "general_hospitals_per_100k": {
+   "key": "general_hospitals_per_100k",
+   "column": "ext__general_hospitals_per_100k",
+   "transform": "none",
+   "label_en": "General hospitals per 100k",
+   "label_ko": "종합병원 수(10만 명당)",
+   "expected_direction": "+ (종합병원 10만 명당: 진단 접근 → 확진·신고(검출 축))",
+   "role": "candidate",
+   "raw_key": "ext__general_hospitals_per_100k"
+  },
+  "obesity_rate": {
+   "key": "obesity_rate",
+   "column": "kchs__DT_H_OBE_OBE__SR",
+   "transform": "none",
+   "label_en": "Obesity rate (self-reported SR %)",
+   "label_ko": "비만율(자가보고)",
+   "expected_direction": "",
+   "role": "candidate_sensitivity",
+   "raw_key": "kchs__DT_H_OBE_OBE__SR"
+  },
+  "high_risk_drinking_rate": {
+   "key": "high_risk_drinking_rate",
+   "column": "ext__high_risk_drinking_rate",
+   "transform": "none",
+   "label_en": "High-risk drinking rate (SR %)",
+   "label_ko": "고위험음주율",
+   "expected_direction": "",
+   "role": "candidate_sensitivity",
+   "raw_key": "ext__high_risk_drinking_rate"
+  },
+  "basic_livelihood_rate": {
+   "key": "basic_livelihood_rate",
+   "column": "ext__basic_livelihood_rate",
+   "transform": "none",
+   "label_en": "Basic-livelihood security recipient rate (%)",
+   "label_ko": "국민기초생활보장 수급자 비율",
+   "expected_direction": "",
+   "role": "candidate_sensitivity",
+   "raw_key": "ext__basic_livelihood_rate"
+  },
+  "hit_and_run_rate": {
+   "key": "hit_and_run_rate",
+   "column": "eloc__DT_1YL13901__뺑소니교통사고율＜br＞(A÷B×100)",
+   "transform": "none",
+   "label_en": "Hit-and-run traffic accident rate (%)",
+   "label_ko": "뺑소니 교통사고율",
+   "expected_direction": "",
+   "role": "negative",
+   "raw_key": "eloc__DT_1YL13901__뺑소니교통사고율＜br＞(A÷B×100)"
+  },
+  "traffic_culture_index": {
+   "key": "traffic_culture_index",
+   "column": "eloc__DT_1YL20331__지수__계",
+   "transform": "none",
+   "label_en": "Traffic culture index",
+   "label_ko": "교통문화지수",
+   "expected_direction": "",
+   "role": "negative",
+   "raw_key": "eloc__DT_1YL20331__지수__계"
+  },
+  "fires_per_10000": {
+   "key": "fires_per_10000",
+   "column": "eloc__DT_1YL21081__주민만명당화재발생건수＜br＞(A÷B×10000)",
+   "transform": "none",
+   "label_en": "Fires per 10000 residents",
+   "label_ko": "주민 만명당 화재 건수",
+   "expected_direction": "",
+   "role": "negative",
+   "raw_key": "eloc__DT_1YL21081__주민만명당화재발생건수＜br＞(A÷B×10000)"
+  }
+ },
+ "rules": {
+  "waic_tol": 4.0,
+  "cpo_fail_frac": 0.05,
+  "main_set": "S1_narrative_full",
+  "vif_threshold": 10.0,
+  "vif_action": "report",
+  "multiverse_n": 127,
+  "windows": {
+   "W1_2013-15": [
+    2013,
+    2015
+   ],
+   "W2_2016-19": [
+    2016,
+    2019
+   ],
+   "W3_2020-25": [
+    2020,
+    2025
+   ]
+  },
+  "covid_post_from": 2020,
+  "years": [
+   2013,
+   2025
+  ],
+  "raw_rules": {
+   "likelihood": "forced-only 모형 WAIC 낮은 쪽(Poisson/NB); 우도 5종(Poisson·NB·ZIP·ZINB·Poisson+관측 iid) 보조 비교 51L",
+   "set_choice": "WAIC 최소, 4 이내면 변수 적은 세트",
+   "credible": "95% CrI 1 제외",
+   "vif_drop": 10,
+   "multiverse_specs": 127,
+   "main_model_note": "주모형 = S1_narrative_full(가설 7 + 강제통제 5). 세트를 다시 바꾸지 않음. VIF>10 유지·보고(독거노인 가구 비율과 80세 이상 비율 지역 평균 ρ 0.96 — 사전 지정 유지, 지역 내·지역 간 분해와 80+ 없음 민감도로 확인).",
+   "main_set": "S1_narrative_full",
+   "vif_action": "report",
+   "years": [
+    2013,
+    2025
+   ],
+   "windows": {
+    "W1_2013-15": [
+     2013,
+     2015
+    ],
+    "W2_2016-19": [
+     2016,
+     2019
+    ],
+    "W3_2020-25": [
+     2020,
+     2025
+    ]
+   },
+   "covid_post_from": 2020,
+   "multiverse_note": "가설 7개 → 서로 다른 비어 있지 않은 부분집합 127개(2^7-1) 전수 적합(200 무작위 추출은 불가능, 81 S7 무한 루프 방지)"
+  },
+  "main_model_note": "Principal model = S1_narrative_full (7 district characteristics + 5 forced controls). VIF>10 retained and reported."
+ },
+ "note": "Outcome: notified new tuberculosis by district of residence (Korea Disease Control and Prevention Agency, KOSIS 117N_A00108), 2013-2025. Characteristics fixed before fitting: older adults living alone, Medical Aid type 1 patients, suspected diabetes at screening, current smoking, foreign residents (log), long-term care hospitals, general hospitals; five forced controls; three negative control exposures.",
+ "source_json": "sets_TBNW_std3.json",
+ "suffix": "_std3",
+ "offset_E_column": "E_std",
+ "offset_E_file": "TBNW_Estd25.csv",
+ "offset_E_sensitivity_column": null,
+ "offset_E_label": "sex-and-age-standardised E, 2 sexes x 8 age bands (national new-case notification rates by year, sex and age), 2013-2025",
+ "sets_after_vif": {
+  "S1_narrative_full": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate",
+   "foreign_residents_per_1000",
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k"
+  ],
+  "S2_reactivation_host": [
+   "older_single_household_share",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate"
+  ],
+  "S3_deprivation_migration": [
+   "medical_aid1_patients_per_100k",
+   "foreign_residents_per_1000"
+  ],
+  "S4_congregate_detection": [
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k"
+  ],
+  "S5_core": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share"
+  ],
+  "S1b_obesity_sensitivity": [
+   "older_single_household_share",
+   "medical_aid1_patients_per_100k",
+   "screening_suspected_diabetes_share",
+   "current_smoking_rate",
+   "foreign_residents_per_1000",
+   "ltc_hospitals_per_100k_65",
+   "general_hospitals_per_100k",
+   "obesity_rate"
+  ]
+ }
+}

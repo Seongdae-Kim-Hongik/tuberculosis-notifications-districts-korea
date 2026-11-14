@@ -1,0 +1,986 @@
+[
+ {
+  "column":"chk__요양기관_계",
+  "key":"care_institutions_per_100k",
+  "label_en":"Care institutions per 100k",
+  "label_ko":"요양기관 수(10만 명당)"
+ },
+ {
+  "column":"eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구",
+  "key":"urban_population_share",
+  "label_en":"Urban-zone population share (%)",
+  "label_ko":"도시지역 인구 비율"
+ },
+ {
+  "column":"eloc__DT_1YL21291E__도시지역면적",
+  "key":"urban_area_share",
+  "label_en":"Urban-zone area share (%)",
+  "label_ko":"도시지역면적 비율"
+ },
+ {
+  "column":"eloc__DT_1YL20631__고령인구비율＜br＞(A÷B×100)",
+  "key":"older_adult_share",
+  "label_en":"Older-adult share (65+ %)",
+  "label_ko":"고령인구비율"
+ },
+ {
+  "column":"eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)",
+  "key":"sex_ratio",
+  "label_en":"Sex ratio (men per 100 women)",
+  "label_ko":"남녀성비"
+ },
+ {
+  "column":"eloc__DT_1YL20891__재정자주도(세입과목개편전)",
+  "key":"fiscal_independence",
+  "label_en":"Fiscal independence (%)",
+  "label_ko":"재정자주도"
+ },
+ {
+  "column":"eloc__DT_1YL20921__재정자립도(세입과목개편전)",
+  "key":"fiscal_self_reliance",
+  "label_en":"Fiscal self-reliance (%)",
+  "label_ko":"재정자립도"
+ },
+ {
+  "column":"eloc__DT_1YL20981__인구천명당의료기관종사의사수＜br＞(A÷B×1000)",
+  "key":"physicians_per_1000",
+  "label_en":"Physicians per 1000",
+  "label_ko":"인구 천명당 의사 수"
+ },
+ {
+  "column":"eloc__DT_1YL20971__인구천명당의료기관병상수＜br＞(A÷B×1000)",
+  "key":"beds_per_1000",
+  "label_en":"Hospital beds per 1000",
+  "label_ko":"인구 천명당 병상 수"
+ },
+ {
+  "column":"kchs__DT_H_BELT__SR",
+  "key":"seatbelt_wearing_rate",
+  "label_en":"Driver seat-belt wearing rate (SR %)",
+  "label_ko":"운전자 안전벨트 착용률"
+ },
+ {
+  "column":"eloc__DT_1YL13901__뺑소니교통사고율＜br＞(A÷B×100)",
+  "key":"hit_and_run_rate",
+  "label_en":"Hit-and-run traffic accident rate (%)",
+  "label_ko":"뺑소니 교통사고율"
+ },
+ {
+  "column":"eloc__DT_1YL20331__지수__계",
+  "key":"traffic_culture_index",
+  "label_en":"Traffic culture index",
+  "label_ko":"교통문화지수"
+ },
+ {
+  "column":"eloc__DT_1YL202108__사고건수",
+  "key":"older_traffic_accidents_per_100k",
+  "label_en":"Older-adult traffic accidents per 100k",
+  "label_ko":"노인 교통사고 건수(10만 명당)"
+ },
+ {
+  "column":"pop__합계출산율",
+  "key":"total_fertility_rate",
+  "label_en":"Total fertility rate",
+  "label_ko":"합계출산율"
+ },
+ {
+  "column":"kchs__DT_117075_H_DR_HIGH_WH__SR",
+  "key":"high_risk_drinking_rate",
+  "label_en":"High-risk drinking rate (SR %)",
+  "label_ko":"고위험음주율"
+ },
+ {
+  "column":"kchs__DT_H_DR_HIGH__SR",
+  "key":"high_risk_drinking_rate_drinkers",
+  "label_en":"High-risk drinking rate among drinkers (SR %)",
+  "label_ko":"연간음주자 고위험음주율"
+ },
+ {
+  "column":"kchs__DT_H_EX_PHY__SR",
+  "key":"moderate_pa_rate",
+  "label_en":"Moderate-or-higher physical activity rate (SR %)",
+  "label_ko":"중강도 이상 신체활동 실천율"
+ },
+ {
+  "column":"kchs__DT_H_EX_WALK__SR",
+  "key":"walking_practice_rate",
+  "label_en":"Walking practice rate (SR %)",
+  "label_ko":"걷기 실천율"
+ },
+ {
+  "column":"kchs__DT_H_MENTAL_STRESS__SR",
+  "key":"perceived_stress_rate",
+  "label_en":"Perceived stress rate (SR %)",
+  "label_ko":"스트레스 인지율"
+ },
+ {
+  "column":"kchs__DT_H_OR_BRUSH__SR",
+  "key":"toothbrushing_after_lunch_rate",
+  "label_en":"Toothbrushing-after-lunch rate (SR %)",
+  "label_ko":"점심 후 칫솔질 실천율"
+ },
+ {
+  "column":"kchs__DT_H_SM__SR",
+  "key":"current_smoking_rate",
+  "label_en":"Current smoking rate (SR %)",
+  "label_ko":"현재흡연율"
+ },
+ {
+  "column":"kchs__DT_H_OBE_OBE__SR",
+  "key":"obesity_rate",
+  "label_en":"Obesity rate (self-reported SR %)",
+  "label_ko":"비만율(자가보고)"
+ },
+ {
+  "column":"kchs__DT_H_OR_INCONV__SR",
+  "key":"chewing_discomfort_rate_65plus",
+  "label_en":"Chewing discomfort rate 65+ (SR %)",
+  "label_ko":"저작불편호소율(65세 이상)"
+ },
+ {
+  "column":"nhis__의료급여1종__진료실인원수",
+  "key":"medical_aid1_patients_per_100k",
+  "label_en":"Medical Aid type 1 treated patients per 100k",
+  "label_ko":"의료급여 1종 진료실인원(10만 명당)"
+ },
+ {
+  "column":"chk__수검률",
+  "key":"screening_uptake",
+  "label_en":"Health screening uptake (%)",
+  "label_ko":"건강검진 수검률"
+ },
+ {
+  "column":"chk__정상B_비만관리_수검자대비비율",
+  "key":"screening_normalB_obesity_share",
+  "label_en":"Screening normal-B obesity-management share (%)",
+  "label_ko":"검진 정상B 비만관리 비율"
+ },
+ {
+  "column":"chk__정상B_당뇨관리_수검자대비비율",
+  "key":"screening_normalB_diabetes_share",
+  "label_en":"Screening normal-B diabetes-management share (%)",
+  "label_ko":"검진 정상B 당뇨관리 비율"
+ },
+ {
+  "column":"fac__생활체육관",
+  "key":"community_gyms_per_100k",
+  "label_en":"Public community gyms per 100k",
+  "label_ko":"생활체육관 수(10만 명당)"
+ },
+ {
+  "column":"fac__수영장",
+  "key":"public_pools_per_100k",
+  "label_en":"Public swimming pools per 100k",
+  "label_ko":"공공 수영장 수(10만 명당)"
+ },
+ {
+  "column":"fac__total",
+  "key":"public_sports_facilities_per_100k",
+  "label_en":"Public sports facilities per 100k",
+  "label_ko":"공공체육시설 수(10만 명당)"
+ },
+ {
+  "column":"vil__계",
+  "key":"village_sports_facilities_per_100k",
+  "label_en":"Village sports facilities per 100k",
+  "label_ko":"마을체육시설 수(10만 명당)"
+ },
+ {
+  "column":"vil__간이운동시설_계",
+  "key":"village_simple_exercise_facilities_per_100k",
+  "label_en":"Village simple exercise facilities per 100k",
+  "label_ko":"마을 간이운동시설 수(10만 명당)"
+ },
+ {
+  "column":"eloc__DT_1YL12701__독거노인가구비율＜br＞(A÷B×100)",
+  "key":"older_single_household_share",
+  "label_en":"Older-adult single-person household share (%)",
+  "label_ko":"독거노인가구비율"
+ },
+ {
+  "column":"eloc__DT_1YL15004__상용직비중＜br＞(A÷B×100)",
+  "key":"regular_employee_share",
+  "label_en":"Regular-employee share (%)",
+  "label_ko":"상용직 비중"
+ },
+ {
+  "column":"eloc__DT_1YL202004__노후주택비율(A÷B×100)",
+  "key":"old_housing_share",
+  "label_en":"Old housing share (%)",
+  "label_ko":"노후주택비율"
+ },
+ {
+  "column":"eloc__DT_1YL202105E__비율__녹지지역",
+  "key":"green_area_share",
+  "label_en":"Green-zone share of urban area (%)",
+  "label_ko":"녹지율"
+ },
+ {
+  "column":"eloc__DT_1YL21161__1인가구비율＜br＞(A÷B×100)",
+  "key":"single_person_household_share",
+  "label_en":"Single-person household share (%)",
+  "label_ko":"1인가구비율"
+ },
+ {
+  "column":"chk__요양기관_요양병원",
+  "key":"long_term_care_hospitals_per_100k",
+  "label_en":"Long-term care hospitals per 100k",
+  "label_ko":"요양병원 수(10만 명당)"
+ },
+ {
+  "column":"chk__요양기관_의원",
+  "key":"clinics_per_100k",
+  "label_en":"Clinics per 100k",
+  "label_ko":"의원 수(10만 명당)"
+ },
+ {
+  "column":"chk__정상B_이상지질혈증관리_수검자대비비율",
+  "key":"screening_normalB_dyslipidemia_share",
+  "label_en":"Screening normal-B dyslipidaemia-management share (%)",
+  "label_ko":"검진 정상B 이상지질혈증관리 비율"
+ },
+ {
+  "column":"eloc__DT_1YL14001__음주운전교통사고비율＜br＞(A÷B×100)",
+  "key":"drunk_driving_accident_share",
+  "label_en":"Drunk-driving traffic accident share (%)",
+  "label_ko":"음주운전 교통사고 비율"
+ },
+ {
+  "column":"eloc__DT_1YL15001__전체",
+  "key":"pupils_per_class",
+  "label_en":"Pupils per class",
+  "label_ko":"학급당 학생 수"
+ },
+ {
+  "column":"eloc__DT_1YL202005__미거주주택(빈집)비율(A÷B×100)",
+  "key":"vacant_housing_share",
+  "label_en":"Vacant housing share (%)",
+  "label_ko":"빈집 비율"
+ },
+ {
+  "column":"eloc__DT_1YL20721__도로포장률＜br＞(A÷B×100)",
+  "key":"road_pavement_rate",
+  "label_en":"Road pavement rate (%)",
+  "label_ko":"도로포장률"
+ },
+ {
+  "column":"eloc__DT_1YL20731__1인당자동차등록대수＜br＞(A÷B)",
+  "key":"cars_per_capita",
+  "label_en":"Registered cars per capita",
+  "label_ko":"1인당 자동차 등록대수"
+ },
+ {
+  "column":"eloc__DT_1YL20751__보급률",
+  "key":"sewerage_coverage",
+  "label_en":"Sewerage coverage (%)",
+  "label_ko":"하수도 보급률"
+ },
+ {
+  "column":"eloc__DT_1YL20931__인구십만명당문화기반시설수＜br＞(A÷B×100000)",
+  "key":"cultural_facilities_per_100k",
+  "label_en":"Cultural facilities per 100k",
+  "label_ko":"문화기반시설 수(10만 명당)"
+ },
+ {
+  "column":"eloc__DT_1YL20941__인구십만명당사회복지시설수＜br＞(A÷B×100000)",
+  "key":"social_welfare_facilities_per_100k",
+  "label_en":"Social welfare facilities per 100k",
+  "label_ko":"사회복지시설 수(10만 명당)"
+ },
+ {
+  "column":"eloc__DT_1YL20951__유아천명당보육시설수＜br＞(A÷B×1000)",
+  "key":"childcare_facilities_per_1000_infants",
+  "label_en":"Childcare facilities per 1000 infants",
+  "label_ko":"유아 천명당 보육시설 수"
+ },
+ {
+  "column":"eloc__DT_1YL20951__주민등록인구(0~5세)＜br＞(B)",
+  "key":"infant_population_share",
+  "label_en":"Infant population (0-5 y) share (%)",
+  "label_ko":"영유아(0~5세) 인구 비율"
+ },
+ {
+  "column":"eloc__DT_1YL20961__노인천명당노인여가복지시설수＜br＞(A÷B×1000)",
+  "key":"older_leisure_facilities_per_1000",
+  "label_en":"Older-adult leisure facilities per 1000 older adults",
+  "label_ko":"노인 천명당 노인여가복지시설 수"
+ },
+ {
+  "column":"eloc__DT_1YL21051__자동차천대당교통사고발생건수＜br＞(A÷B×1000)",
+  "key":"traffic_accidents_per_1000_cars",
+  "label_en":"Traffic accidents per 1000 cars",
+  "label_ko":"자동차 천대당 교통사고 건수"
+ },
+ {
+  "column":"eloc__DT_1YL21081__주민만명당화재발생건수＜br＞(A÷B×10000)",
+  "key":"fires_per_10000",
+  "label_en":"Fires per 10000 residents",
+  "label_ko":"주민 만명당 화재 건수"
+ },
+ {
+  "column":"eloc__DT_1YL21271__인구천명당외국인수＜br＞(A÷B×1000)",
+  "key":"foreigners_per_1000",
+  "label_en":"Foreign residents per 1000",
+  "label_ko":"인구 천명당 외국인 수"
+ },
+ {
+  "column":"eloc__DT_1YL21311__생활계폐기물재활용률＜br＞(A÷B×100)",
+  "key":"waste_recycling_rate",
+  "label_en":"Household waste recycling rate (%)",
+  "label_ko":"생활계폐기물 재활용률"
+ },
+ {
+  "column":"eloc__DT_1YL21321__주민1인당생활계폐기물배출량＜br＞(A÷B)*1000",
+  "key":"waste_per_capita",
+  "label_en":"Household waste per capita (kg\/day)",
+  "label_ko":"주민 1인당 생활계폐기물 배출량"
+ },
+ {
+  "column":"eloc__INH_1B8000I_01__조이혼율(천명당)",
+  "key":"crude_divorce_rate",
+  "label_en":"Crude divorce rate (per 1000)",
+  "label_ko":"조이혼율"
+ },
+ {
+  "column":"eloc__INH_1BB0002__다문화혼인비중(%)",
+  "key":"multicultural_marriage_share",
+  "label_en":"Multicultural marriage share (%)",
+  "label_ko":"다문화 혼인 비중"
+ },
+ {
+  "column":"eloc__INH_1ES3A01S__실업률(％)",
+  "key":"unemployment_rate",
+  "label_en":"Unemployment rate (%)",
+  "label_ko":"실업률"
+ },
+ {
+  "column":"eloc__INH_1ES3A02S_03__고용률(%)__계",
+  "key":"employment_rate",
+  "label_en":"Employment rate (%)",
+  "label_ko":"고용률"
+ },
+ {
+  "column":"eloc__INH_1ES3A02S_03__고용률(%)__여자",
+  "key":"female_employment_rate",
+  "label_en":"Female employment rate (%)",
+  "label_ko":"여성 고용률"
+ },
+ {
+  "column":"kchs__DT_117075_H_BELT_BACK__SR",
+  "key":"rear_seatbelt_wearing_rate",
+  "label_en":"Rear-seat belt wearing rate (SR %)",
+  "label_ko":"뒷좌석 안전벨트 착용률"
+ },
+ {
+  "column":"kchs__DT_117075_H_DR_DRIV__SR",
+  "key":"drunk_driving_experience_rate",
+  "label_en":"Drunk-driving experience rate (SR %)",
+  "label_ko":"연간 음주운전 경험률"
+ },
+ {
+  "column":"kchs__DT_11775_NUT_LABEL_UTIL__SR",
+  "key":"nutrition_label_use_rate",
+  "label_en":"Nutrition-label use rate (SR %)",
+  "label_ko":"영양표시 활용률"
+ },
+ {
+  "column":"kchs__DT_CPR_AWAR__SR",
+  "key":"cpr_awareness_rate",
+  "label_en":"CPR awareness rate (SR %)",
+  "label_ko":"심폐소생술 인지율"
+ },
+ {
+  "column":"kchs__DT_CPR_EDU__SR",
+  "key":"cpr_training_rate",
+  "label_en":"CPR training experience rate (SR %)",
+  "label_ko":"심폐소생술 교육경험률"
+ },
+ {
+  "column":"kchs__DT_HEALTH_RECOG__SR",
+  "key":"good_self_rated_health_rate",
+  "label_en":"Good self-rated health rate (SR %)",
+  "label_ko":"주관적 건강인지율"
+ },
+ {
+  "column":"kchs__DT_H_DR_MONTH__SR",
+  "key":"monthly_drinking_rate",
+  "label_en":"Monthly drinking rate (SR %)",
+  "label_ko":"월간음주율"
+ },
+ {
+  "column":"kchs__DT_H_HAND_WASH__SR",
+  "key":"handwashing_after_outing_rate",
+  "label_en":"Handwashing-after-outing rate (SR %)",
+  "label_ko":"외출 후 손 씻기 실천율"
+ },
+ {
+  "column":"kchs__DT_H_SM_MALE__SR",
+  "key":"male_current_smoking_rate",
+  "label_en":"Male current smoking rate (SR %)",
+  "label_ko":"남자 현재흡연율"
+ },
+ {
+  "column":"kchs__DT_H_SOAP_USE__SR",
+  "key":"soap_use_rate",
+  "label_en":"Soap or sanitiser use rate (SR %)",
+  "label_ko":"비누·손 세정제 사용률"
+ },
+ {
+  "column":"kchs__DT_NECE_CLINIC__SR",
+  "key":"public_health_centre_use_rate",
+  "label_en":"Annual public health centre use rate (SR %)",
+  "label_ko":"연간 보건기관 이용률"
+ },
+ {
+  "column":"pop__모평균출산연령",
+  "key":"mean_maternal_age",
+  "label_en":"Mean maternal age at birth (y)",
+  "label_ko":"모의 평균 출산연령"
+ },
+ {
+  "column":"pop__연령별출산율_35_39",
+  "key":"fertility_rate_35_39",
+  "label_en":"Age-specific fertility rate 35-39",
+  "label_ko":"연령별 출산율(35-39세)"
+ },
+ {
+  "column":"pop__평균초혼연령_아내",
+  "key":"mean_age_first_marriage_wife",
+  "label_en":"Mean age at first marriage (wife)",
+  "label_ko":"평균 초혼연령(아내)"
+ },
+ {
+  "column":"vil__등산로",
+  "key":"village_hiking_trails_per_100k",
+  "label_en":"Village hiking trails per 100k",
+  "label_ko":"마을 등산로 수(10만 명당)"
+ },
+ {
+  "column":"vil__체력단련시설_점",
+  "key":"village_fitness_facilities_per_100k",
+  "label_en":"Village fitness facilities per 100k",
+  "label_ko":"마을 체력단련시설 수(10만 명당)"
+ },
+ {
+  "column":"kchs__DT_117075_DIE_LOW_SALT_1__SR",
+  "key":"low_salt_preference_rate",
+  "label_en":"Low-salt preference rate (SR %)",
+  "label_ko":"저염선호율"
+ },
+ {
+  "column":"eloc__DT_1YL20643__청년인구비율__청년여성비율(19~39세)",
+  "key":"young_female_share",
+  "label_en":"Young female (19-39 y) share (%)",
+  "label_ko":"청년여성비율(19~39세)"
+ },
+ {
+  "column":"ext__pop80_share",
+  "key":"pop80_share",
+  "label_en":"Population aged 80+ share (%)",
+  "label_ko":"80세 이상 인구 비율"
+ },
+ {
+  "column":"ext__liverB_share",
+  "key":"screening_normalB_liver_share",
+  "label_en":"Screening normal-B liver-function-management share (%)",
+  "label_ko":"검진 정상B 간기능관리 비율"
+ },
+ {
+  "column":"ext__alcohol_venues_per10k",
+  "key":"alcohol_venues_per10k",
+  "label_en":"Entertainment and singing bars per 10k",
+  "label_ko":"유흥·단란주점 수(1만 명당)"
+ },
+ {
+  "column":"ext__restaurants_per10k",
+  "key":"restaurants_per10k",
+  "label_en":"General restaurants per 10k",
+  "label_ko":"일반음식점 수(1만 명당)"
+ },
+ {
+  "column":"ext__delivery_per10k",
+  "key":"delivery_food_outlets_per10k",
+  "label_en":"Delivery-oriented food outlets per 10k",
+  "label_ko":"배달 위주 업소 수(1만 명당)"
+ },
+ {
+  "column":"ext__outside_care_share",
+  "key":"outside_care_share",
+  "label_en":"Out-of-district outpatient share (%)",
+  "label_ko":"관외 외래 진료 비율"
+ },
+ {
+  "column":"chk__대사_복부비만_비율",
+  "key":"screening_abdominal_obesity_share",
+  "label_en":"Screening abdominal obesity share (%)",
+  "label_ko":"검진 복부비만 비율"
+ },
+ {
+  "column":"kchs__DT_INFLUENZA__SR",
+  "key":"influenza_vaccination_rate",
+  "label_en":"Annual influenza vaccination rate (SR %)",
+  "label_ko":"연간 인플루엔자 예방접종률"
+ },
+ {
+  "column":"ext__factory_land_share",
+  "key":"factory_land_share",
+  "label_en":"Factory land share of district area (%)",
+  "label_ko":"공장용지 면적 비율"
+ },
+ {
+  "column":"kchs__DT_H_MENTAL_DEPRESS__SR",
+  "key":"depressive_mood_rate",
+  "label_en":"Depressive-mood experience rate (SR %)",
+  "label_ko":"우울감 경험률"
+ },
+ {
+  "column":"eloc__INH_1EA1011_01__농가인구",
+  "key":"farm_population_share",
+  "label_en":"Farm-household population share (%)",
+  "label_ko":"농가인구 비율"
+ },
+ {
+  "column":"ext__basic_livelihood_rate",
+  "key":"basic_livelihood_rate",
+  "label_en":"Basic-livelihood security recipient rate (%)",
+  "label_ko":"국민기초생활보장 수급자 비율"
+ },
+ {
+  "column":"ext__farm_share_ward0",
+  "key":"farm_population_share_ward0",
+  "label_en":"Farm-household population share (wards set to 0) (%)",
+  "label_ko":"농가인구 비율(자치구 0)"
+ },
+ {
+  "column":"kchs__DT_HYPER_DOCTOR__SR",
+  "key":"hypertension_diagnosis_rate",
+  "label_en":"Diagnosed hypertension rate (age 30+; SR %)",
+  "label_ko":"고혈압 진단 경험률"
+ },
+ {
+  "column":"kchs__DT_HYPER_DOCTOR_DRUG__SR",
+  "key":"hypertension_treatment_rate",
+  "label_en":"Treatment rate among diagnosed hypertension (SR %)",
+  "label_ko":"고혈압 진단자 치료율"
+ },
+ {
+  "column":"kchs__DT_DIA_DOCTOR__SR",
+  "key":"diabetes_diagnosis_rate",
+  "label_en":"Diagnosed diabetes rate (age 30+; SR %)",
+  "label_ko":"당뇨병 진단 경험률"
+ },
+ {
+  "column":"ext__em_specialists_per100k",
+  "key":"em_specialists_per_100k",
+  "label_en":"Emergency-medicine specialists per 100k",
+  "label_ko":"응급의학과 전문의 수(10만 명당)"
+ },
+ {
+  "column":"chk__요양기관_종합병원",
+  "key":"general_hospitals_per_100k",
+  "label_en":"General hospitals per 100k",
+  "label_ko":"종합병원 수(10만 명당)"
+ },
+ {
+  "column":"chk__질환의심_고혈압당뇨_고혈압_수검자대비비율",
+  "key":"screening_suspected_hypertension_share",
+  "label_en":"Screening-measured suspected hypertension share (%)",
+  "label_ko":"검진 고혈압 질환의심 비율"
+ },
+ {
+  "column":"chk__질환의심_고혈압당뇨_당뇨병_수검자대비비율",
+  "key":"screening_suspected_diabetes_share",
+  "label_en":"Screening-measured suspected diabetes share (%)",
+  "label_ko":"검진 당뇨 질환의심 비율"
+ },
+ {
+  "column":"chk__질환의심_신장질환_수검자대비비율",
+  "key":"screening_suspected_kidney_share",
+  "label_en":"Screening suspected kidney disease share (%)",
+  "label_ko":"검진 신장질환 의심 비율"
+ },
+ {
+  "column":"kchs__DT_117075_HYPER_AWAR__SR",
+  "key":"bp_awareness_rate",
+  "label_en":"Blood pressure awareness rate (SR %)",
+  "label_ko":"혈압수치 인지율"
+ },
+ {
+  "column":"ext__tertiary_educated_share",
+  "key":"tertiary_educated_share",
+  "label_en":"Tertiary-educated share (%)",
+  "label_ko":"고등교육 이수 비율"
+ },
+ {
+  "column":"ext__ltc_hospitals_per100k_65",
+  "key":"ltc_hospitals_per_100k_65",
+  "label_en":"Long-term care hospitals per 100k aged 65+",
+  "label_ko":"요양병원 수(65세 이상 10만 명당)"
+ },
+ {
+  "column":"ext__ill_defined_share",
+  "key":"ill_defined_death_share",
+  "label_en":"Ill-defined cause-of-death share (R00-R99, %)",
+  "label_ko":"불명확 사인 사망 비율(R00-R99)"
+ },
+ {
+  "column":"eloc__DT_1YL20721__전체개통도＜br＞(B)",
+  "key":"road_length_per_1000",
+  "label_en":"Road length per 1000 residents (km)",
+  "label_ko":"인구 천명당 도로 연장(km)"
+ },
+ {
+  "column":"ext__log_pop_density",
+  "key":"log_population_density",
+  "label_en":"Population density (log persons per km2)",
+  "label_ko":"인구밀도(로그)"
+ },
+ {
+  "column":"ext__breakfast_eating_rate",
+  "key":"breakfast_eating_rate",
+  "label_en":"Breakfast-eating rate (%)",
+  "label_ko":"아침식사율"
+ },
+ {
+  "column":"ext__hcv_notif_rate_log",
+  "key":"hcv_notification_rate_log",
+  "label_en":"Hepatitis C notification rate 2017-2024 (log per 100k)",
+  "label_ko":"C형간염 신고율(2017-2024 로그 10만 명당)"
+ },
+ {
+  "column":"ext__dm_suspect_share",
+  "key":"screening_diabetes_suspected_share",
+  "label_en":"Screening diabetes-suspected share (%)",
+  "label_ko":"검진 당뇨병 질환의심 비율"
+ },
+ {
+  "column":"ext__liver_suspect_share",
+  "key":"screening_liver_disease_suspected_share",
+  "label_en":"Screening liver-disease-suspected share (%)",
+  "label_ko":"검진 간장질환 질환의심 비율"
+ },
+ {
+  "column":"ext__im_specialists_per100k",
+  "key":"im_specialists_per_100k",
+  "label_en":"Internal-medicine specialists per 100k",
+  "label_ko":"내과 전문의 수(10만 명당)"
+ },
+ {
+  "column":"ext__inland_water_share",
+  "key":"inland_water_share",
+  "label_en":"Inland water land share (rivers + reservoirs + ditches; % of area)",
+  "label_ko":"내수면(하천·유지·구거) 면적 비율"
+ },
+ {
+  "column":"ext__coastal",
+  "key":"coastal_district",
+  "label_en":"Coastal district (sea coastline > 4 km)",
+  "label_ko":"해안 시군구"
+ },
+ {
+  "column":"kchs__DT_DIA_TREAT__SR",
+  "key":"diabetes_treatment_rate",
+  "label_en":"Treatment rate among adults with diagnosed diabetes (age 30+; SR %)",
+  "label_ko":"당뇨병 진단자 치료율"
+ },
+ {
+  "column":"kchs__DT_DIA_EYE__SR",
+  "key":"diabetic_eye_exam_rate",
+  "label_en":"Annual diabetic retinopathy screening rate (age 30+; SR %)",
+  "label_ko":"당뇨병 안저검사 수진율"
+ },
+ {
+  "column":"kchs__DT_DIA_KIDNEY__SR",
+  "key":"diabetic_kidney_test_rate",
+  "label_en":"Annual diabetic microalbuminuria test rate (age 30+; SR %)",
+  "label_ko":"당뇨병 미세단백뇨검사 수진율"
+ },
+ {
+  "column":"kchs__DT_117075_DIA_AWAR__SR",
+  "key":"glucose_awareness_rate",
+  "label_en":"Blood glucose level awareness rate (SR %)",
+  "label_ko":"혈당수치 인지율"
+ },
+ {
+  "column":"chk__유질환자_폐결핵_수검자대비비율",
+  "key":"prior_tb_share",
+  "label_en":"Screening prior pulmonary tuberculosis share (%)",
+  "label_ko":"검진 폐결핵 유질환자 비율"
+ },
+ {
+  "column":"ext__coal_host",
+  "key":"coal_plant_host",
+  "label_en":"Coal-fired power plant host district (0\/1)",
+  "label_ko":"석탄 화력발전소 소재(0\/1)"
+ },
+ {
+  "column":"ext__detached_hh_share",
+  "key":"detached_house_households",
+  "label_en":"Households in detached houses (%)",
+  "label_ko":"단독주택 거주 가구 비율"
+ },
+ {
+  "column":"ext__coal_gw",
+  "key":"coal_capacity_gw",
+  "label_en":"Coal-fired capacity hosted (GW)",
+  "label_ko":"석탄 화력 설비용량(GW)"
+ },
+ {
+  "column":"ext__coal_near",
+  "key":"coal_plant_host_or_adjacent",
+  "label_en":"Coal plant host or adjacent district (0\/1)",
+  "label_ko":"석탄 발전소 소재·인접(0\/1)"
+ },
+ {
+  "column":"chk__질환의심_폐결핵_수검자대비비율",
+  "key":"tb_suspected_screening",
+  "label_en":"Suspected pulmonary tuberculosis on screening chest radiography (% of screened)",
+  "label_ko":"검진 흉부촬영 폐결핵 의심 비율"
+ },
+ {
+  "column":"ext__temp_annual",
+  "key":"annual_mean_temperature",
+  "label_en":"Annual mean temperature (°C)",
+  "label_ko":"연평균 기온(℃)"
+ },
+ {
+  "column":"ext__public_baths_per10k",
+  "key":"public_baths_per_10k",
+  "label_en":"Public bathhouses per 10 000",
+  "label_ko":"목욕장업 수(인구 1만 명당)"
+ },
+ {
+  "column":"ext__dentists_per100k",
+  "key":"dentists_per_100k",
+  "label_en":"Dentists per 100k (log)",
+  "label_ko":"치과의사 수(10만 명당 로그)"
+ },
+ {
+  "column":"ext__genhosp_per100k",
+  "key":"genhosp_per100k",
+  "label_en":"General hospitals per 100k",
+  "label_ko":"종합병원 수(10만 명당)"
+ },
+ {
+  "column":"ext__green_area_share",
+  "key":"green_area_share",
+  "label_en":"Green-zone share of urban area (%)",
+  "label_ko":"녹지율"
+ },
+ {
+  "column":"ext__paddy_share",
+  "key":"paddy_field_share",
+  "label_en":"Paddy-field land share (% of area)",
+  "label_ko":"논(답) 면적 비율"
+ },
+ {
+  "column":"ext__upland_share",
+  "key":"upland_field_share",
+  "label_en":"Upland dry-field land share (% of area)",
+  "label_ko":"밭(전) 면적 비율"
+ },
+ {
+  "column":"ext__forest_share",
+  "key":"forest_land_share",
+  "label_en":"Forest land share (% of area)",
+  "label_ko":"임야 면적 비율"
+ },
+ {
+  "column":"ext__old_housing_share",
+  "key":"old_housing_share",
+  "label_en":"Old housing share (%)",
+  "label_ko":"노후 주택 비율"
+ },
+ {
+  "column":"ext__precip_annual",
+  "key":"annual_precipitation",
+  "label_en":"Annual precipitation (mm)",
+  "label_ko":"연 강수량(mm)"
+ },
+ {
+  "column":"ext__hfrs_cases",
+  "key":"hfrs_cases",
+  "label_en":"Notified HFRS cases",
+  "label_ko":"신증후군출혈열 신고 건수"
+ },
+ {
+  "column":"ext__lept_cases",
+  "key":"lept_cases",
+  "label_en":"Notified leptospirosis cases",
+  "label_ko":"렙토스피라증 신고 건수"
+ },
+ {
+  "column":"ext__foreign_residents_per1000",
+  "key":"foreign_residents_per_1000",
+  "label_en":"Foreign residents per 1000 (log1p)",
+  "label_ko":"인구 천명당 외국인 주민"
+ },
+ {
+  "column":"ext__cx_screening_uptake",
+  "key":"cervical_screening_uptake",
+  "label_en":"Cervical screening uptake (%)",
+  "label_ko":"자궁경부암 검진 수검률"
+ },
+ {
+  "column":"ext__screening_clinic_share",
+  "key":"screening_clinic_share",
+  "label_en":"Clinic share among screening institutions (%)",
+  "label_ko":"검진기관 중 의원 비율"
+ },
+ {
+  "column":"ext__farmland_share",
+  "key":"farmland_share",
+  "label_en":"Farmland (paddy, dry field and orchard) share of land area (%)",
+  "label_ko":"농경지(답·전·과수원) 면적 비율"
+ },
+ {
+  "column":"ext__autumn_temp",
+  "key":"autumn_mean_temperature",
+  "label_en":"Autumn (September–November) mean temperature (°C)",
+  "label_ko":"가을(9–11월) 평균기온"
+ },
+ {
+  "column":"ext__autumn_precip",
+  "key":"autumn_precipitation",
+  "label_en":"Autumn (September–November) precipitation (mm)",
+  "label_ko":"가을(9–11월) 강수량"
+ },
+ {
+  "column":"ext__summer_precip",
+  "key":"summer_precipitation",
+  "label_en":"Summer (June–August) precipitation (mm)",
+  "label_ko":"여름(6–8월) 강수량"
+ },
+ {
+  "column":"ext__annual_temp",
+  "key":"annual_mean_temperature_era5",
+  "label_en":"Annual mean temperature, ERA5 (°C)",
+  "label_ko":"연평균기온(ERA5)"
+ },
+ {
+  "column":"ext__moderate_pa_rate",
+  "key":"moderate_pa_rate",
+  "label_en":"Moderate-or-higher physical activity rate (SR %)",
+  "label_ko":"중강도 이상 신체활동 실천율"
+ },
+ {
+  "column":"ext__urban_population_share",
+  "key":"urban_population_share",
+  "label_en":"Urban-zone population share (%)",
+  "label_ko":"도시지역 인구 비율"
+ },
+ {
+  "column":"ext__physicians_per_1000",
+  "key":"physicians_per_1000",
+  "label_en":"Physicians per 1000",
+  "label_ko":"인구 천명당 의사 수"
+ },
+ {
+  "column":"ext__sex_ratio",
+  "key":"sex_ratio",
+  "label_en":"Sex ratio (men per 100 women)",
+  "label_ko":"남녀성비"
+ },
+ {
+  "column":"ext__fiscal_independence",
+  "key":"fiscal_independence",
+  "label_en":"Fiscal independence (%)",
+  "label_ko":"재정자주도"
+ },
+ {
+  "column":"ext__hit_and_run_rate",
+  "key":"hit_and_run_rate",
+  "label_en":"Hit-and-run traffic accident rate (%)",
+  "label_ko":"뺑소니 교통사고율"
+ },
+ {
+  "column":"ext__traffic_culture_index",
+  "key":"traffic_culture_index",
+  "label_en":"Traffic culture index",
+  "label_ko":"교통문화지수"
+ },
+ {
+  "column":"ext__fires_per_10000",
+  "key":"fires_per_10000",
+  "label_en":"Fires per 10 000 residents",
+  "label_ko":"주민 만명당 화재 발생 건수"
+ },
+ {
+  "column":"ext__livestock_farm_density",
+  "key":"livestock_farm_density",
+  "label_en":"Livestock holdings density (beef cattle, dairy and pig farms per km2, log1p)",
+  "label_ko":"축산 농가 밀도(한우·젖소·돼지 농가 수\/km² 로그)"
+ },
+ {
+  "column":"ext__lept_rain_aug_oct",
+  "key":"rain_aug_oct",
+  "label_en":"August–October precipitation (mm)",
+  "label_ko":"8–10월 강수량(mm)"
+ },
+ {
+  "column":"ext__lept_heavy_rain_days",
+  "key":"heavy_rain_days",
+  "label_en":"Days with ≥80 mm daily precipitation in June–October",
+  "label_ko":"6–10월 일강수 80 mm 이상 일수"
+ },
+ {
+  "column":"ext__lept_temp_mean",
+  "key":"annual_mean_temperature_asos",
+  "label_en":"Annual mean temperature, ASOS stations (°C)",
+  "label_ko":"연평균 기온(ASOS, ℃)"
+ },
+ {
+  "column":"ext__lept_precip_annual",
+  "key":"annual_precipitation_asos",
+  "label_en":"Annual precipitation, ASOS stations (mm)",
+  "label_ko":"연 강수량(ASOS, mm)"
+ },
+ {
+  "column":"ext__exam_per_1000_40p",
+  "key":"liver_screening_tests_per_1000_40p",
+  "label_en":"Liver cancer screening tests per 1000 adults aged 40+",
+  "label_ko":"40세 이상 1천 명당 간암 검진 건수"
+ },
+ {
+  "column":"ext__tbnw_cases",
+  "key":"tbnw_cases",
+  "label_en":"Notified new tuberculosis cases",
+  "label_ko":"결핵 신환자 신고 수"
+ },
+ {
+  "column":"ext__older_single_household_share",
+  "key":"older_single_household_share",
+  "label_en":"Older-adult single-person household share (%)",
+  "label_ko":"독거노인가구비율"
+ },
+ {
+  "column":"ext__medical_aid1_patients_per_100k",
+  "key":"medical_aid1_patients_per_100k",
+  "label_en":"Medical Aid type 1 treated patients per 100k",
+  "label_ko":"의료급여 1종 진료실인원(10만 명당)"
+ },
+ {
+  "column":"ext__screening_suspected_diabetes_share",
+  "key":"screening_suspected_diabetes_share",
+  "label_en":"Screening-measured suspected diabetes share (%)",
+  "label_ko":"검진 당뇨 질환의심 비율"
+ },
+ {
+  "column":"ext__current_smoking_rate",
+  "key":"current_smoking_rate",
+  "label_en":"Current smoking rate (SR %)",
+  "label_ko":"현재흡연율"
+ },
+ {
+  "column":"ext__general_hospitals_per_100k",
+  "key":"general_hospitals_per_100k",
+  "label_en":"General hospitals per 100k",
+  "label_ko":"종합병원 수(10만 명당)"
+ },
+ {
+  "column":"ext__high_risk_drinking_rate",
+  "key":"high_risk_drinking_rate",
+  "label_en":"High-risk drinking rate (SR %)",
+  "label_ko":"고위험음주율"
+ }
+]
