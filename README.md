@@ -2,9 +2,9 @@
 
 Analysis code for the manuscript
 
-> Kim S. *As tuberculosis declined in Korea, its district geography concentrated rather than flattened.* Submitted to *Thorax*.
+> Kim S. *As tuberculosis declined in Korea, its district geography concentrated rather than flattened.* Submitted to the *European Respiratory Journal*.
 
-Archived version: Zenodo, https://doi.org/10.5281/zenodo.24220642 (v1.0.0).
+Archived version: Zenodo, https://doi.org/10.5281/zenodo.24221137 (v1.0.1).
 
 ## Contents
 
@@ -41,7 +41,7 @@ Run from the repository root (set `ST_DATA_ROOT`, `ST_FBDZIP_CORRECTED` and `ST_
 | 6 | `52L_tbnw_likelihood.R`, `52P_tbnw_prior_sens.R`, `52T_tbnw_tbd_aux.R`, `52S_tbnw_from2015.R` | Likelihoods, priors, respiratory tuberculosis deaths, 2015-2025 restriction |
 | 7 | `85_window_maps.R`, `86_yearly_maps_ehsa_tbnw.py`, `87_window_grid.py` | Maps, yearly smoothed ratios, persistence and emerging hot spot analysis |
 | 8 | `88g_sens_prep.py TBNW std3 TRANS,GCA`, `88g_sens_suite.R` (`GROUP=1..6`), `88h_ppc_varpart.R`, `88k_struct_kh_tbnw.R` (nb, struct, kh, review) with `kh_constraints_tbnw.R`, `89g_sens_combine.py` | Sensitivity analyses, comparison outcomes, Knorr-Held models |
-| 9 | `04_분석/TBNW/MS/build/` (`build_refs_tbnw.py`, `figs_tbnw.py`, `build_thorax_tbnw.py`, `esm_tbnw.py`, `cover_thorax_tbnw.py`, `check_thorax_tbnw.py`; `run_all_tbnw.sh`) | Manuscript, supporting information, figures and checks |
+| 9 | `04_분석/TBNW/MS/build/` (`build_refs_tbnw.py`, `figs_tbnw.py`, `build_thorax_tbnw.py` (ERJ build), `esm_tbnw.py`, `cover_thorax_tbnw.py`, `check_thorax_tbnw.py`; `run_all_tbnw.sh`) | Manuscript, supporting information, figures and checks |
 
 The boundary file is found at `data/boundary/final.shp` by default; set `ST_SHP` to use another path.
 

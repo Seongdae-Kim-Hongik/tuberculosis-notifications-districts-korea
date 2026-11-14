@@ -1,4 +1,4 @@
-# build_thorax_tbnw.py — TBNW Thorax Original research 원고 조립(2026-11-14, build_tmih_scrt.py 이식).
+# build_thorax_tbnw.py — TBNW 원고 조립(11/14 저널 변경 Thorax → European Respiratory Journal: Take home message, 원저 3,000단어·표그림 8·참고문헌 40; 파일명은 이력 보존용으로 유지)(2026-11-14, build_tmih_scrt.py 이식).
 #  Thorax 규정(MS/00_Thorax_투고규정_261114.md): 제목면(제목·저자·소속·교신·ORCID·단어 수) → 구조화 초록 ≤250(Background/Methods/Results/Conclusions) → Key messages 3제목 → Keywords,
 #   본문 ≤3,500(서론~고찰), 참고문헌 ≤40(밴쿠버 위첨자), 단일 익명(저자 정보 포함), BMJ 선언문(Contributors·Funding·Competing interests·Patient and public involvement·Ethics approval·Data availability).
 #   소속 = 홍익대 단독. AI 고지 = 번역·첨삭만.
@@ -121,10 +121,8 @@ def build(bw=0, aw=0):
     J.head("Abstract", 1)
     for p in D["Abstract"]:
         m = re.match(r"^(Background|Methods|Results|Conclusions):\s*(.*)$", p, re.S); J.para(f"<b>{m.group(1)}</b> {m.group(2)}")
-    J.head("Key messages", 1)
-    for p in D["Key messages"]:
-        m = re.match(r"^(What is already known on this topic|What this study adds|How this study might affect research, practice or policy):\s*(.*)$", p, re.S)
-        J.para(f"<b>{m.group(1)}</b>"); J.para(m.group(2))
+    J.head("Take home message", 1)
+    for p in D["Take home message"]: J.para(p)
     J.para(f"<b>Keywords:</b> {C.KEYWORDS}", before=6)
     J.page_break(); J.counting = True
     J.head("Introduction", 1)
@@ -150,7 +148,6 @@ def build(bw=0, aw=0):
     J.head("Competing interests", 1); J.para(COI)
     J.head("Patient consent for publication", 1); J.para("Not applicable.")
     J.head("Ethics approval", 1); J.para("The Institutional Review Board of Hongik University approved the study (7002340-202511-HR-012; continuing review 7002340-202611-HR-040) and waived informed consent because only published aggregate statistics were used.")
-    J.head("Provenance and peer review", 1); J.para("Not commissioned; externally peer reviewed.")
     J.head("Data availability statement", 1); J.para(data_statement())
     J.head("Use of artificial intelligence", 1); J.para(AI_STATEMENT)
     assert sorted(J.cites) == KEYS, (set(J.cites) ^ set(KEYS))
@@ -190,13 +187,13 @@ def fix_orphans(path, heads, max_iter=8):
         d.save(path); print("orphan fixed:", orphan)
 
 if __name__ == "__main__":
-    p = os.path.join(OUT, "Manuscript_Thorax_TBNW.docx"); D = read_draft()
+    p = os.path.join(OUT, "Manuscript_ERJ_TBNW.docx"); D = read_draft()
     AB = [re.sub(r"^(Background|Methods|Results|Conclusions):\s*", "", x) for x in D["Abstract"]]; aw = sum(len(x.split()) for x in AB)
     J, rl, D = build(); J.doc_title = "Manuscript"; J.save(p); bw = docx_bw(p)
     J, rl, D = build(bw, aw); J.doc_title = "Manuscript"; J.save(p); assert docx_bw(p) == bw
-    heads = {"Provenance and peer review", "Abstract", "Key messages", "Introduction", "Methods", "Results", "Discussion", "Conclusion", "References", "Figure legends", "Contributors", "Funding", "Competing interests", "Patient consent for publication", "Ethics approval", "Data availability statement", "Use of artificial intelligence", "Supporting Information", "Patient and public involvement"} | {x[0] for x in C.METHODS + C.RESULTS}
+    heads = {"Take home message", "Abstract", "Introduction", "Methods", "Results", "Discussion", "Conclusion", "References", "Figure legends", "Contributors", "Funding", "Competing interests", "Patient consent for publication", "Ethics approval", "Data availability statement", "Use of artificial intelligence", "Supporting Information", "Patient and public involvement"} | {x[0] for x in C.METHODS + C.RESULTS}
     fix_orphans(p, heads)
-    open(os.path.join(OUT, "wordcount_thorax.txt"), "w").write(f"body_words={bw}\nabstract_words={aw}\nrefs={len(KEYS)}\ntables=2\nfigures=3\nshort_title_chars={len(C.RUNNING)}\n")
+    open(os.path.join(OUT, "wordcount_erj.txt"), "w").write(f"body_words={bw}\nabstract_words={aw}\nrefs={len(KEYS)}\ntables=2\nfigures=3\nshort_title_chars={len(C.RUNNING)}\n")
     open(os.path.join(OUT, "reference_list.txt"), "w").write("\n".join(rl) + "\n")
     print(f"body {bw} | abstract {aw} | refs {len(KEYS)}")
-    assert bw <= 3500 and aw <= 250 and len(KEYS) <= 40, (bw, aw, len(KEYS))
+    assert bw <= 3000 and aw <= 250 and len(KEYS) <= 40, (bw, aw, len(KEYS))

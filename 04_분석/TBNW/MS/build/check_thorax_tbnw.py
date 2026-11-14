@@ -9,26 +9,26 @@ from build_thorax_tbnw import read_draft, TITLE, ORCID, KEYS, AI_STATEMENT, AFFI
 HERE = os.path.dirname(os.path.abspath(__file__)); MS = os.path.dirname(HERE); OUT = os.path.join(MS, "out")
 N = C.N; R = []
 def ok(c, m): R.append(("ok  " if c else "FAIL") + " " + m)
-W = dict(l.split("=") for l in open(os.path.join(OUT, "wordcount_thorax.txt")).read().split())
+W = dict(l.split("=") for l in open(os.path.join(OUT, "wordcount_erj.txt")).read().split())
 D = read_draft(); AB = D["Abstract"]; ab = " ".join(AB)
-MSF, SUPF, CLF, CKF = "Manuscript_Thorax_TBNW.docx", "Supporting_Information_Thorax_TBNW.docx", "Cover_Letter_Thorax_TBNW.docx", "STROBE_Checklist_Thorax_TBNW.docx"
+MSF, SUPF, CLF, CKF = "Manuscript_ERJ_TBNW.docx", "Supporting_Information_ERJ_TBNW.docx", "Cover_Letter_ERJ_TBNW.docx", "STROBE_Checklist_ERJ_TBNW.docx"
 for f in (MSF, SUPF, CLF, CKF, "Figures/Figure1.tif", "Figures/Figure2.tif", "Figures/Figure3.tif"): ok(os.path.exists(os.path.join(OUT, f)), f"파일 {f}")
 # 1. Thorax 한도
-ok(int(W["body_words"]) <= 3500, f"본문 {W['body_words']} ≤ 3,500")
+ok(int(W["body_words"]) <= 3000, f"본문 {W['body_words']} ≤ 3,000(ERJ 원저)")
 ok(int(W["abstract_words"]) <= 250, f"초록 {W['abstract_words']} ≤ 250")
 ok(int(W["refs"]) <= 40, f"참고문헌 {W['refs']} ≤ 40")
 ok(len(TITLE.split()) <= 20, f"제목 {len(TITLE.split())}단어 ≤ 20")
 ok([p.split(":")[0] for p in AB] == ["Background", "Methods", "Results", "Conclusions"], "구조 초록 Background/Methods/Results/Conclusions")
-KM = D["Key messages"]; ok([p.split(":")[0] for p in KM] == ["What is already known on this topic", "What this study adds", "How this study might affect research, practice or policy"], "Key messages 3제목")
+TH = " ".join(D["Take home message"]); ok(0 < len(TH) <= 256, f"Take home message {len(TH)}자 ≤ 256")
 ok(":" not in TITLE and "229" not in TITLE and "2013" not in TITLE and "standardi" not in TITLE.lower(), "제목 쌍점·시리즈 틀 없음")
 ok(not re.search(r"\[@", ab), "초록 인용 없음")
 d = Document(os.path.join(OUT, MSF)); _ps = [p.text.strip() for p in d.paragraphs]; _dx = "\n".join(_ps); tp = "\n".join(_ps[:12])
 for t in ("Seongdae Kim", "kimsd@hongik.ac.kr", ORCID, "Word count:"): ok(t in tp, f"제목면 '{t}'")
 ok(sum(p.endswith(AFFIL) for p in _ps[:8]) == 1 and not any("Korea University" in p for p in _ps[:12]), "소속 홍익대 1개")
-for h in ("Contributors", "Funding", "Competing interests", "Patient and public involvement", "Ethics approval", "Data availability statement", "Use of artificial intelligence", "Supporting Information", "Key messages"): ok(h in _ps, f"절 '{h}'")
+for h in ("Contributors", "Funding", "Competing interests", "Ethics approval", "Data availability statement", "Use of artificial intelligence", "Supporting Information", "Take home message"): ok(h in _ps, f"절 '{h}'")
 ok(AI_STATEMENT in _dx and "only for translation and English-language editing" in _dx and not re.search(r"(?i)not used to|was not used", _dx), "AI 고지 = 번역·첨삭만(부정문 없음)")
 ok("Institutional Review Board" in _dx and "7002340-202611-HR-040" in _dx, "윤리 승인·번호")
-_ord = ["Abstract", "Key messages", "Introduction", "Methods", "Results", "Discussion", "Conclusion", "Contributors", "References", "Supporting Information", "Figure legends"]; pos = [_ps.index(k) if k in _ps else -1 for k in _ord]
+_ord = ["Abstract", "Take home message", "Introduction", "Methods", "Results", "Discussion", "Conclusion", "Contributors", "References", "Supporting Information", "Figure legends"]; pos = [_ps.index(k) if k in _ps else -1 for k in _ord]
 ok(all(p >= 0 for p in pos) and pos == sorted(pos), f"원고 순서 {pos}")
 it = [next(i for i, p in enumerate(_ps) if p.startswith(f"Table {k} ")) if any(p.startswith(f"Table {k} ") for p in _ps) else -1 for k in (1, 2)]
 ok(len(d.tables) == 2 and 0 < it[0] < it[1] and it[0] > pos[-1], f"표 1·2 원고 끝(그림 설명 뒤) {it}")
@@ -81,5 +81,5 @@ seen = []; [seen.append(t) for t in re.findall(r"Table (S\d)", body) if t not in
 ok(not re.search(r"RR \d\.\d{2},", body), "RR은 셋째 자리")
 G = os.path.expandvars("$ST_DATA_ROOT") + "/G.Downloads/00_PLAYBOOK/검증기록/check_citation_order.py"
 co = subprocess.run([sys.executable, G, os.path.join(OUT, MSF)], capture_output=True, text=True).stdout; ok("PASS" in co and "경고 0" in co, "인용 순서 check_citation_order PASS")
-open(os.path.join(OUT, "check_thorax.txt"), "w").write("\n".join(R)); nf = sum(r.startswith("FAIL") for r in R)
+open(os.path.join(OUT, "check_erj.txt"), "w").write("\n".join(R)); nf = sum(r.startswith("FAIL") for r in R)
 print("\n".join(r for r in R if r.startswith("FAIL")) or "", f"\n{len(R)} checks, FAIL {nf}", "PASS" if nf == 0 else "")
